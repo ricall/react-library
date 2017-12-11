@@ -1,0 +1,8 @@
+{
+  "presets": ["es2015", "react"],
+  "plugins": [
+    "syntax-async-functions",
+    "transform-regenerator",
+    "babel-plugin-inline-import"
+  ]
+}

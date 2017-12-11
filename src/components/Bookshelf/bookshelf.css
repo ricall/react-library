@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+*, *:after, *:before {
+  box-sizing: inherit; }
+
+body {
+  background: lightgray; }
+
+.bookshelf--frame {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.bookshelf--frame {
+  background: tan;
+  background: url("bg-wood3.png"), linear-gradient(#323232, #373737 190px, #a8914e 190px, #a8914e 192px, #9A8548 192px, #9A8548 198px, #8c7942 198px, #8c7942 200px);
+  background-size: auto, 10px 240px;
+  border-left: 10px solid #9A8548;
+  border-right: 10px solid #9A8548;
+  text-align: center; }
+  .bookshelf--frame:first-of-type {
+    border-top: 10px solid #9A8548; }
+  .bookshelf--frame .book-wrapper {
+    transform: perspective(100px) rotateY(-3deg);
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    vertical-align: bottom;
+    height: 220px;
+    position: relative;
+    margin: 0 0 20px 0;
+    max-width: 100%; }
+    .bookshelf--frame .book-wrapper img {
+      border: 1px solid black;
+      background: #ffffff;
+      height: 190px;
+      width: 128px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 100%;
+      max-width: 100%; }
+    .bookshelf--frame .book-wrapper .missingBook {
+      border: 1px solid black;
+      background: #ffffff;
+      height: 190px;
+      width: 128px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      max-height: 100%;
+      max-width: 100%; }
+      .bookshelf--frame .book-wrapper .missingBook .title {
+        position: absolute;
+        font-size: 20px;
+        top: 5px;
+        max-height: 25%;
+        width: 100%; }
+      .bookshelf--frame .book-wrapper .missingBook .author {
+        position: absolute;
+        font-size: 12px;
+        bottom: 5px;
+        width: 100%; }
+  .bookshelf--frame .book-wrapper:before,
+  .bookshelf--frame .book-wrapper:after {
+    position: absolute;
+    bottom: 0;
+    height: 190px;
+    content: ' ';
+    z-index: -1; }
+  .bookshelf--frame .book-wrapper:before {
+    width: 128px;
+    left: 10px;
+    background-color: #5a2d18;
+    box-shadow: 5px 5px 20px #333; }
+  .bookshelf--frame .book-wrapper:after {
+    border: 1px solid black;
+    width: 10px;
+    left: 138px;
+    bottom: 1px;
+    height: 188px;
+    background-color: #EFEFEF;
+    box-shadow: inset 0 0 5px #aaa;
+    transform: perspective(100px) rotateY(20deg); }

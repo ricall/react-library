@@ -1,0 +1,113 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+// variables
+$book: #ffffff;
+$darktan: #9A8548;
+$grad2: #373737;
+$grad1: darken($grad2, 2);
+$grad3: lighten($darktan, 4);
+$grad5: darken($darktan, 4);
+
+// for presentation's sake
+body {
+    background: lightgray;
+}
+.bookshelf--frame {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bookshelf--frame {
+    background: tan;
+    background: url('bg-wood3.png'), linear-gradient($grad1,$grad2 190px,$grad3 190px,$grad3 192px,$darktan 192px,$darktan 198px,$grad5 198px,$grad5 200px);
+    background-size: auto, 10px 240px;
+    border-left: 10px solid $darktan;
+    border-right: 10px solid $darktan;
+    text-align: center;
+    &:first-of-type {
+        border-top: 10px solid $darktan;
+    }
+    .book-wrapper {
+        transform: perspective(100px) rotateY(-3deg);
+        display: inline-block;
+        text-align: center;
+        width: 150px;
+        vertical-align: bottom;
+        height: 220px;
+        position: relative;
+        margin: 0 0 20px 0;
+        max-width: 100%;
+        img {
+            border: 1px solid black;
+            background: $book;
+            height: 190px;
+            width: 128px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        .missingBook {
+            border: 1px solid black;
+            background: $book;
+            height: 190px;
+            width: 128px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            max-height: 100%;
+            max-width: 100%;
+
+            .title {
+                position: absolute;
+                font-size: 20px;
+                top: 5px;
+                max-height: 25%;
+                width: 100%;
+            }
+            .author {
+                position: absolute;
+                font-size: 12px;
+                bottom: 5px;
+                width: 100%;
+            }
+
+        }
+    }
+    .book-wrapper:before,
+    .book-wrapper:after {
+        position: absolute;
+        bottom: 0;
+        height: 190px;
+        content: ' ';
+        z-index: -1;
+    }
+
+    .book-wrapper:before {
+        width: 128px;
+        left: 10px;
+        background-color: #5a2d18;
+        box-shadow: 5px 5px 20px #333;
+    }
+
+    .book-wrapper:after {
+        border:1px solid black;
+        width: 10px;
+        left: 138px;
+        bottom: 1px;
+        height: 188px;
+        background-color: #EFEFEF;
+        box-shadow: inset 0 0 5px #aaa;
+        transform: perspective(100px) rotateY(20deg);
+    }
+}
